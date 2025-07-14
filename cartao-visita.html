@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão de visita</title>
+     <style>
+        body {
+        background-color: #131313;
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        }
+
+        input {
+        padding: 8px;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 300px;
+        }
+
+        button {
+        padding: 10px 20px;
+        background-color: #0059ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        }
+
+        table {
+        margin-top: 30px;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 500px;
+        background-color: #222;
+        }
+
+        th, td {
+        border: 1px solid #444;
+        padding: 10px;
+        text-align: left;
+        }
+
+        th {
+        background-color: #333;
+        }
+  </style>
+</head>
+<body>
+
+    <h1>Cartão de visita</h1>
+
+    <label>Nome</label><br>
+    <input type="text" id="nome"><br>
+
+    <label>Idade:</label><br>
+    <input type="number" id="idade"><br>
+
+    <label>Profissão:</label><br>
+    <input type="text" id="profissao"><br>
+
+    <button onclick="mostrarInfo()">Proximo</button>
+
+    <div id="info"></div>
+
+    <script>
+    function mostrarInfo() {
+        let nome = document.getElementById("nome").value
+        let idade = parseInt(document.getElementById("idade").value)
+        let profissao = document.getElementById("profissao").value
+
+        if (isNaN(idade)){
+            alert("idade com apenas números")
+            return
+        }
+                
+        const infoDiv = document.getElementById('info')
+
+        const texto = ("Nome: " + nome + "\n Idade: " + idade + "\n Profissão: " + profissao)
+        document.getElementById("info").innerText = texto
+
+        infoDiv.innerHTML = `
+        <table>
+          <tr><th>Nome</th><td>${nome}</td></tr>
+          <tr><th>Idade</th><td>${idade}</td></tr>
+          <tr><th>Profissão</th><td>${profissao}</td></tr>
+        </table>
+      `;
+
+    }   
+    
+        
+    </script>
+    
+</body>
+</html>
