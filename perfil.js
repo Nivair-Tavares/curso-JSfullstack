@@ -1,5 +1,7 @@
 function apresentarPerfil() {
 
+console.log("Apresentação: ");    
+
 const nome = "Nivair"
 let ano = 2025
 let anoNascimento = 2000
