@@ -1,0 +1,434 @@
+/* ================================
+   IMPORTAÇÃO DE FONTES
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Belleza&family=Federo&family=Italiana&family=Roboto:ital,wght@0,100..900;1,100..900&family=Viaoda+Libre&display=swap');
+
+
+/* ================================
+   CONFIGURAÇÃO GERAL DO SITE
+================================ */
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;  
+    margin: 0 auto;     
+    padding: 20px;     
+    border-radius: 10px; 
+}
+
+.glass {
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(25px);          
+    -webkit-backdrop-filter: blur(10px);  
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 0.5rem;
+}
+
+
+/* ================================
+   CABEÇALHO
+================================ */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    border-bottom: 1px solid gray;
+    width: 100%;
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;   
+  justify-content: flex-start; 
+  gap: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    width: 8rem;
+    border: 5px outset gray;
+}
+
+.header-content {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
+
+/* ================================
+   BARRA DE NAVEGAÇÃO SUPERIOR
+================================ */
+.barra {
+    background-color: rgba(116, 116, 116, 0.3);
+    display: flex;
+    justify-content: center;   
+    gap: 20px;                
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.barra a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover com efeito Glow branco */
+.barra a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    animation: glowPulse 1.2s infinite alternate;
+}
+
+/* Quando o link está ativo/selecionado */
+.barra a:active,
+.barra a:focus {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+    animation: glowPulseActive 1.2s infinite alternate;
+}
+
+/* Animação do glow */
+@keyframes glowPulse {
+    from {
+        text-shadow: 0 0 6px #ffffff, 0 0 12px #ffffff;
+        box-shadow: 0 0 4px #ffffff, inset 0 0 4px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 12px #ffffff, 0 0 24px #ffffff;
+        box-shadow: 0 0 8px #ffffff, inset 0 0 8px #ffffff;
+    }
+}
+
+@keyframes glowPulseActive {
+    from {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+        box-shadow: 0 0 6px #ffffff, inset 0 0 6px #ffffff;
+    }
+    to {
+        text-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
+        box-shadow: 0 0 12px #ffffff, inset 0 0 12px #ffffff;
+    }
+}
+
+/* ================================
+   BARRA LATERAL (MENU OCULTO)
+================================ */
+aside {
+    position: fixed;
+    top: 0;
+    left: -220px; 
+    width: 220px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+}
+
+aside:hover {
+    left: 0;
+}
+
+aside h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside li {
+    margin: 12px 0;
+}
+
+aside a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+aside a:hover {
+    background: rgba(85, 85, 85, 0.793);
+    color: white;
+}
+
+/* ================================
+   RODAPÉ
+================================ */
+.rodape {
+    background-color: rgba(0, 0, 0, 0.905);
+    padding: 3rem;
+    display: flex;
+}
+
+.rodape p {
+    margin: auto;
+}
+
+
+/* ================================
+   BARRA DE DATA
+================================ */
+.data {
+    display: flex;
+    background-color: white;
+    margin-top: 2rem;
+}
+
+.data p{
+    color: black;
+    margin: auto;
+}
+
+
+/* ================================
+   BOTÃO ESTILIZADO
+================================ */
+.botao {
+    display: inline-block;
+    width: auto;
+    max-width: max-content;
+    white-space: nowrap;
+    
+    color: #000;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ffffff, #e6e6e6);
+    padding: 0.6rem 1.4rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-family: "Bebas Neue", sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: linear-gradient(135deg, #222222, #ffffff);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+}
+
+.botao:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* ================================
+   BOTÃO DE MÚSICA NO HEADER
+================================ */
+
+.header-buttons {
+    display: flex;
+    gap: 10px; /* espaço entre "Saiba mais" e o botão */
+    align-items: center;
+}
+
+.musica-btn {
+    background: linear-gradient(135deg, #ffffff, #e6e6e6);
+    color: #000;
+}
+
+/* ================================
+   PAISAGEM
+================================ */
+.paisagem-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;                /* espaço entre imagem e texto */
+    margin: 20px 0;
+}
+
+.paisagem-container img.paisagem {
+    width: 50%;               /* tamanho da imagem */
+    border-radius: 10px;
+}
+
+.paisagem-container figcaption {
+    flex: 1;                  /* texto ocupa o restante do espaço */
+    color: white;
+    font-size: 1rem;
+}
+
+/* ================================
+   VÍDEO COM TEXTO
+================================ */
+.video-cenario-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;               /* espaço entre texto e vídeo */
+    margin: 20px 0;
+}
+
+.video-cenario-container .texto-cenario {
+    flex: 1;                 /* texto ocupa o espaço restante */
+    color: white;
+    font-size: 1rem;
+}
+
+.video-cenario-container video {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ===========================
+   Formulário
+=========================== */
+
+.container.glass form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.container.glass label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff;
+}
+
+.container.glass input[type="text"],
+.container.glass input[type="email"],
+.container.glass input[type="password"],
+.container.glass input[type="date"],
+.container.glass select,
+.container.glass textarea {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* Efeito quando selecionado/focado */
+.container.glass input:focus,
+.container.glass select:focus,
+.container.glass textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px #ffffff;
+    color: #ffffff; /* texto branco */
+}
+
+/* Remover efeito nos checkboxes e radios */
+.container.glass input[type="checkbox"]:focus,
+.container.glass input[type="radio"]:focus {
+    outline: none;
+    box-shadow: none;
+    background: none;
+}
+
+/* Checkboxes e radios padrão */
+.container.glass input[type="checkbox"],
+.container.glass input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Textos do form */
+.container.glass p {
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Botão principal */
+.container.glass .botao {
+    background: linear-gradient(135deg, #555555, #474747);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.container.glass .botao:hover {
+    background: linear-gradient(135deg, #ffffff, #3c3c3c);
+    color: rgb(0, 0, 0);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(252, 252, 252, 0.5);
+}
+
+/* Botão de mostrar senha */
+#botaotoggle {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#botaotoggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+}
+
+/* Cor do texto do select quando selecionado */
+.container.glass select {
+    background: rgba(255, 255, 255, 0.1);
+    color: white; /* texto inicial */
+}
+
+/* Quando o usuário seleciona uma opção */
+.container.glass select option {
+    background: rgba(63, 63, 63, 0.8); /* fundo das opções do dropdown */
+    color: rgb(255, 255, 255); /* texto das opções */
+}
+
+/* Mantendo texto branco no select após escolha */
+.container.glass select:focus,
+.container.glass select:active {
+    color: white; 
+}
+
+
+

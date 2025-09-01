@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartão de visita</title>
      <style>
-        body {
-        background-color: #131313;
-        color: #e0e0e0;
-        font-family: Arial, sans-serif;
-        padding: 20px;
+        h1 {
+          color: black;
+          background-color: #e0e0e0;
+          padding: 8px;
+          font-family: Arial, Helvetica, sans-serif;
+          border-radius: 15px;
+          text-align: center;
+          
         }
 
-        input {
+        body {
+        background-color: #262626;
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+        width: fit-content;
+        margin: auto;
+        }
+
+        input {  
         padding: 8px;
         margin-bottom: 10px;
         width: 100%;
@@ -20,11 +31,12 @@
         }
 
         button {
+        text-align: center;
         padding: 10px 20px;
         background-color: #0059ff;
         color: white;
         border: none;
-        border-radius: 5px;
+        border-radius: 555px;
         cursor: pointer;
         margin-top: 10px;
         }
@@ -66,9 +78,9 @@
     <div id="info"></div>
 
     <script>
-    function mostrarInfo() {
+    function mostrarInfo() { // Fiz a logica de pedir os dados, mas a parte do HTML e CSS eu entendo pouco, então fiz so para pratica e aprendizado.
         let nome = document.getElementById("nome").value
-        let idade = parseInt(document.getElementById("idade").value)
+        let idade = parseInt(document.getElementById("idade").value) 
         let profissao = document.getElementById("profissao").value
 
         if (isNaN(idade)){
@@ -90,6 +102,7 @@
       `;
 
     }   
+    
     
         
     </script>

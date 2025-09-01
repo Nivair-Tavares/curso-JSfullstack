@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nivair Tavares Filho">
+    <meta name="description" content="Meu primeiro site pessoal com HTML e CSS">
+    <title>Meu Primeiro Site</title> 
+    <link rel="stylesheet" href="css/styleSec.css">
+
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;       /* centraliza horizontalmente */
+        justify-content: flex-start; /* começa do topo */
+        background-image: url('images/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-blend-mode: lighten;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        }
+
+        /* Cria efeito glass no conteúdo */
+        h1, p, footer {
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 900px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* Footer mais discreto */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sobre</h1>
+
+    <p>Meu nome é Nivair, mas gosto de ser chamado de Neil. Tenho 25 anos, nasci em Goiânia, Goiás, e atualmente moro em Viseu, Portugal.
+
+    No meu tempo livre, gosto bastante de assistir séries, jogar e editar vídeos. Trabalho como freelancer, principalmente como designer gráfico e, às vezes, como editor de vídeo. Além disso, também estudo e procuro aprender sempre algo novo — essa é uma qualidade que valorizo muito em mim: a vontade constante de evoluir todos os dias.
+
+    Tenho um sonho que me motiva bastante: ficar bom o suficiente em programação para garantir um futuro sólido e, acima de tudo, ser capaz de dar orgulho e felicidade aos meus pais.
+
+    Sou alguém criativo, dedicado e movido pelo desejo de crescer e construir algo significativo na vida.</p>
+    
+    <footer>
+        <a href="index.html">Voltar para o site principal</a>
+    </footer>
+</body>
+</html>
